@@ -25,6 +25,7 @@ public:
 			for (auto it = _base.begin(); it != _base.end(); *it++) {
 				if (i == index) {
 					_base.erase(it);
+					sequence_count--;
 					break;
 				}
 				i++;

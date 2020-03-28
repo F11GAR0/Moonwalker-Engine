@@ -28,6 +28,7 @@ void _stdcall FreePlugin(std::string name) {
 		if (std::get<0>((*plugins)[i]) == name) {
 			FreeLibrary(std::get<1>((*plugins)[i]));
 			plugins->Delete(i);
+			break;
 		}
 	}
 }
