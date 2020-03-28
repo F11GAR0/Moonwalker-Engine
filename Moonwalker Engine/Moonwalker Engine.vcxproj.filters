@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{cccfc0fd-66bf-4e02-8e10-1485a9ddc33c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SAMPFUNCS">
+      <UniqueIdentifier>{2d7bfe95-8a21-4434-87b5-2d6be29c0a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SAMPFUNCS\SFAPI">
+      <UniqueIdentifier>{aa477f52-514d-40f5-ae28-bb160c2a0dc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SAMPFUNCS\game_api">
+      <UniqueIdentifier>{53e0a9d3-859d-435c-affa-f075a9795755}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SAMPFUNCS\game_api\game">
+      <UniqueIdentifier>{109df1d8-8fe7-48a1-9396-85b0aa3e7026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SAMPFUNCS\game_api\sdk">
+      <UniqueIdentifier>{91417a97-c398-41e9-a1ca-30a0039f0e43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SAMPFUNCS\game_api\sdk\google">
+      <UniqueIdentifier>{853e5392-837a-4711-88f9-87ef7f060e5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SAMPFUNCS\game_api\sdk\google\sparsehash">
+      <UniqueIdentifier>{12849801-cbd5-4688-8495-b6990a79a8b4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="walker.h" />
+    <ClInclude Include="SAMPFUNCS\SFAPI\SAMPFUNCS_API.h">
+      <Filter>SAMPFUNCS\SFAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\SFAPI\SF_Types.h">
+      <Filter>SAMPFUNCS\SFAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\SFAPI\SFCLEO.h">
+      <Filter>SAMPFUNCS\SFAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\SFAPI\SFGame.h">
+      <Filter>SAMPFUNCS\SFAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\SFAPI\SFRakNet.h">
+      <Filter>SAMPFUNCS\SFAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\SFAPI\SFRender.h">
+      <Filter>SAMPFUNCS\SFAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\SFAPI\SFSAMP.h">
+      <Filter>SAMPFUNCS\SFAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game_api.h">
+      <Filter>SAMPFUNCS\game_api</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\C3DMarker.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\C3DMarkers.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAERadioTrackManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAnimBlendAssocGroup.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAnimBlendAssociation.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAnimBlendHierarchy.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAnimBlendSequence.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAnimBlendStaticAssociation.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAnimBlock.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAnimManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAudioContainer.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAudioEngine.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CAutomobile.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CBike.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CBmx.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CBoat.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CBuilding.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CCam.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CCamera.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CCarEnterExit.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CCarGenerator.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CCheckpoint.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CCheckpoints.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CCivilianPed.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CClock.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CColModel.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CColPoint.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CControllerConfigManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CCoronas.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CDamageManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CDoor.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CEntity.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CEvent.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CEventDamage.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CEventGroup.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CEventGunShot.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CEventList.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CExplosion.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CExplosionManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CFire.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CFireManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CFont.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CFx.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CFxManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CFxSystem.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CGame.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CGarage.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CGarages.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CHandlingEntry.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CHandlingManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CHud.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CKeyGen.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CMarker.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CMenuManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CModelInfo.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CMonsterTruck.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CObject.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\Common.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPad.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CParticle.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CParticleObject.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CParticleSystemManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPathFind.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPed.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPedDamageResponse.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPedDamageResponseCalculator.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPedIK.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPedIntelligence.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPedModelInfo.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPedSound.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPhysical.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPickup.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPickups.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPlane.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPlayerInfo.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPlayerPed.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPointLights.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPools.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CPopulation.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CProjectile.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CProjectileInfo.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CQuadBike.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CRadar.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CRegisteredCorona.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CRemote.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CRenderWare.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CRestart.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CRopes.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CSettings.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CStats.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CStreaming.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CTaskManagementSystem.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CTaskManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CTasks.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CText.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CTheCarGenerators.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CTrailer.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CVehicle.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CVehicleScanner.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CVisibilityPlugins.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CWanted.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CWater.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CWaterManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CWeapon.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CWeaponInfo.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CWeaponStat.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CWeaponStatManager.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CWeather.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\CWorld.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\RenderWare.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\Task.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskAttack.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskBasic.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskCar.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskCarAccessories.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskGoTo.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskIK.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskJumpFall.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskPhysicalResponse.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskSecondary.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\game\TaskTypes.h">
+      <Filter>SAMPFUNCS\game_api\game</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\CBox.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\CMatrix.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\CMatrix_Pad.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\CQuat.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\CRect2D.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\CSphere.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\CVector.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\CVector2D.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\CVector4D.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.Buffer.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.FastHashMap.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.FastHashSet.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.Game.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.Game.hpp">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.HashMap.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.hpp">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.Map.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.MemAccess.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.MemAccess.hpp">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.Misc.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.Misc.hpp">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.Time.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SharedUtil.Time.hpp">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SString.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\SString.hpp">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\UTF8.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\WString.h">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\WString.hpp">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\google\type_traits.h">
+      <Filter>SAMPFUNCS\game_api\sdk\google</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\google\sparsehash\densehashtable.h">
+      <Filter>SAMPFUNCS\game_api\sdk\google\sparsehash</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\google\sparsehash\sparseconfig.h">
+      <Filter>SAMPFUNCS\game_api\sdk\google\sparsehash</Filter>
+    </ClInclude>
+    <ClInclude Include="SAMPFUNCS\game_api\sdk\google\sparsehash\sparsehashtable.h">
+      <Filter>SAMPFUNCS\game_api\sdk\google\sparsehash</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketQueue.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="walker.cpp" />
+    <ClCompile Include="SAMPFUNCS\game_api\sdk\UTF8Detect.cpp">
+      <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="SAMPFUNCS\SFAPI\SAMPFUNCS.lib">
+      <Filter>SAMPFUNCS\SFAPI</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SAMPFUNCS\game_api\sdk\google\dense_hash_map">
+      <Filter>SAMPFUNCS\game_api\sdk\google</Filter>
+    </None>
+    <None Include="SAMPFUNCS\game_api\sdk\google\dense_hash_set">
+      <Filter>SAMPFUNCS\game_api\sdk\google</Filter>
+    </None>
+    <None Include="SAMPFUNCS\game_api\sdk\google\sparse_hash_map">
+      <Filter>SAMPFUNCS\game_api\sdk\google</Filter>
+    </None>
+    <None Include="SAMPFUNCS\game_api\sdk\google\sparse_hash_set">
+      <Filter>SAMPFUNCS\game_api\sdk\google</Filter>
+    </None>
+    <None Include="SAMPFUNCS\game_api\sdk\google\sparsetable">
+      <Filter>SAMPFUNCS\game_api\sdk\google</Filter>
+    </None>
+  </ItemGroup>
+</Project>
