@@ -77,9 +77,9 @@ typedef float               FLOAT;      //  32
 #define LOCAL_FUNCTION_END      };
 #define LOCAL_FUNCTION          local
 
-#ifdef _MSC_VER
-#define snprintf _snprintf
-#endif
+//#ifdef _MSC_VER
+//#define snprintf _snprintf
+//#endif
 
 #ifndef stricmp
 #define stricmp _stricmp

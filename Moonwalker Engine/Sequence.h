@@ -71,6 +71,7 @@ private:
 			}
 			i++;
 		}
+		return *_base.end();
 	}
 	int sequence_count;
 };
