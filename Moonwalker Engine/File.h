@@ -13,6 +13,9 @@ enum Mode {
 
 class FileWriter {
 public:
+	static void Delete(std::string path) {
+		remove(path.c_str());
+	}
 	void Open(std::string path, Mode mode) {
 		buff.open(path, mode);
 	}
@@ -32,7 +35,7 @@ private:
 
 class FileReader {
 public:
-	void Open(std::string path, Mode mode) {
+	void Open(std::string path, Mode mode = Mode::M_OPEN_WRITE_APPEND) {
 		buff.open(path, mode);
 	}
 	void Close() {

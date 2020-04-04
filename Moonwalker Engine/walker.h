@@ -25,36 +25,53 @@
 #include "File.h"
 #include "Converter.h"
 
+#define LOG_TIMESTAMP
+
 class MOONWALKER {
 public:
 	MOONWALKER() {
-		_log.Open(this->GetCurrentDllDirectory() + "\\WALKER\\walker.log", Mode::M_TRUNC);
+		_log.Delete(this->GetCurrentDllDirectory() + "\\WALKER\\walker.log");
 		Log("Session started");
+	}
+	~MOONWALKER() {
+		Log("Session end with no errors.");
 	}
 	void Log(std::string message) {
 		SYSTEMTIME time;
 		GetLocalTime(&time);
-		_log.Write("[" + Convert::ToString(time.wDay)
+		_log.Open(this->GetCurrentDllDirectory() + "\\WALKER\\walker.log", Mode::M_OPEN_WRITE_APPEND);
+		_log.Write(
+#ifdef LOG_TIMESTAMP
+			"[" + Convert::ToString(time.wDay)
 			+ ":" + Convert::ToString(time.wMonth)
 			+ ":" + Convert::ToString(time.wYear)
 			+ " || " + Convert::ToString(time.wHour)
 			+ ":" + Convert::ToString(time.wMinute)
 			+ ":" + Convert::ToString(time.wSecond)
 			+ ":" + Convert::ToString(time.wMilliseconds)
-			+ "]: "
-			+ message);
+			+ "]: " +
+#endif
+			message + '\n');
+		_log.Close();
 	}
 private:
 	FileWriter _log;
 	std::string GetCurrentDllDirectory()
 	{
 		char result[MAX_PATH];
-		return std::string(result, GetModuleFileNameA(NULL, result, MAX_PATH));
+		std::string ret = std::string(result, GetModuleFileNameA(NULL, result, MAX_PATH));
+		bool stop = false;
+		while (!stop) {
+			if (ret[ret.size() - 1] != '\\')
+				ret.erase(ret.end() - 1);
+			else stop = true;
+		}
+		return ret;
 	}
 };
 
 #ifdef NO_SAMPFUNCS
-MOONWALKER *NJIN;
+MOONWALKER *NJIN = new MOONWALKER();
 #else
 SAMPFUNCS *NJIN;
 #endif
