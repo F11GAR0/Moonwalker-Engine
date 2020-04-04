@@ -20,7 +20,7 @@ public:
 	}
 	void Send() {
 		if(loaded)
-			SF->Log(this->message);
+			NJIN->Log(this->message);
 	}
 private:
 	bool loaded;

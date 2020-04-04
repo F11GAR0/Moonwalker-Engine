@@ -1,12 +1,13 @@
 #include "walker.h"
 
 
+
 #define MOONWALKER_VERSION "1.0"
 
 Sequence<std::tuple<std::string, HMODULE>> *plugins = new Sequence<std::tuple<std::string, HMODULE>>();
 
 void _stdcall LoadPlugin(std::string name) {
-	SF->Log("[MOONWALKER]: Trying to load plugin: " + name);
+	NJIN->Log("[MOONWALKER]: Trying to load plugin: " + name);
 	char *buff = (char*)malloc(512);
 	GetCurrentDirectory(512, buff);
 	char *path = (char*)malloc(512);
@@ -16,7 +17,7 @@ void _stdcall LoadPlugin(std::string name) {
 	if (std::get<1>(plugin) != NULL) {
 		free(path);
 		plugins->Push(plugin);
-		SF->Log("[MOONWALKER]: plugin \"" + name + "\" succesfuly loaded");
+		NJIN->Log("[MOONWALKER]: plugin \"" + name + "\" succesfuly loaded");
 	}
 	else {
 		Exception *ex = new Exception("LoadPlugin", 2, (std::string("Failed to load plugin from ") + path).c_str());
@@ -31,7 +32,7 @@ void _stdcall FreePlugin(std::string name) {
 		if (std::get<0>((*plugins)[i]) == name) {
 			FreeLibrary(std::get<1>((*plugins)[i]));
 			plugins->Delete(i);
-			SF->Log("[MOONWALKER]: plugin \"" + name + "\" succesfuly unloaded");
+			NJIN->Log("[MOONWALKER]: plugin \"" + name + "\" succesfuly unloaded");
 			break;
 		}
 	}
@@ -54,7 +55,7 @@ void LoadPlugins() {
 	GetCurrentDirectory(512, current_directory);
 	char *walker_directory = (char*)malloc(512);
 	sprintf(walker_directory, "%s\\WALKER\\*", current_directory);
-	SF->Log("[MOONWALKER]: Walker working directory: " + std::string(walker_directory));
+	NJIN->Log("[MOONWALKER]: Walker working directory: " + std::string(walker_directory));
 	WIN32_FIND_DATA FindFileData;
 	HANDLE hf;
 	hf = FindFirstFile(walker_directory, &FindFileData);
@@ -73,7 +74,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:	
-		SF->Log("[MOONWALKER]: Moonwalker loaded. Version: " + std::string(MOONWALKER_VERSION));
+		NJIN->Log("[MOONWALKER]: Moonwalker loaded. Version: " + std::string(MOONWALKER_VERSION));
 		LoadPlugins();
 	case DLL_THREAD_ATTACH:
 	case DLL_THREAD_DETACH:

@@ -19,7 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Converter.h" />
     <ClInclude Include="Exception.h" />
+    <ClInclude Include="File.h" />
     <ClInclude Include="PacketQueue.h" />
     <ClInclude Include="SAMPFUNCS\game_api\game\C3DMarker.h" />
     <ClInclude Include="SAMPFUNCS\game_api\game\C3DMarkers.h" />
