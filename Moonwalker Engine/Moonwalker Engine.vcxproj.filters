@@ -529,6 +529,12 @@
     <ClInclude Include="Converter.h">
       <Filter>Engine</Filter>
     </ClInclude>
+    <ClInclude Include="SAMPSigcheck.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryStuff.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="walker.cpp" />

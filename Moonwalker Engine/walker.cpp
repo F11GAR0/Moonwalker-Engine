@@ -69,13 +69,28 @@ void LoadPlugins() {
 	}
 }
 
+void Entry(HMODULE hModule) {
+	NJIN->Log("[MOONWALKER]: Moonwalker loaded. Version: " + std::string(MOONWALKER_VERSION));
+	switch (SAMP::CheckVersion()) {
+	case SAMPVER::UNKNOWN:
+		NJIN->Log("Unknown SAMP version!");
+		break;
+	case SAMPVER::V037R2:
+		NJIN->Log("Detected SAMP 0.3.7 R2 version!");
+		break;
+	case SAMPVER::V037R3:
+		NJIN->Log("Detected SAMP 0.3.7 R3 version!");
+		break;
+	}
+	LoadPlugins();
+}
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
 	switch (ul_reason_for_call)
 	{
-	case DLL_PROCESS_ATTACH:	
-		NJIN->Log("[MOONWALKER]: Moonwalker loaded. Version: " + std::string(MOONWALKER_VERSION));
-		LoadPlugins();
+	case DLL_PROCESS_ATTACH:
+		Entry(hModule);
 	case DLL_THREAD_ATTACH:
 	case DLL_THREAD_DETACH:
 	case DLL_PROCESS_DETACH:

@@ -25,6 +25,7 @@
 #include "File.h"
 #include "Converter.h"
 
+
 #define LOG_TIMESTAMP
 
 class MOONWALKER {
@@ -76,6 +77,7 @@ MOONWALKER *NJIN = new MOONWALKER();
 SAMPFUNCS *NJIN;
 #endif
 
+#include "SAMPSigcheck.h"
 #include "PacketQueue.h"
 #include "Exception.h"
 #include "Sequence.h"

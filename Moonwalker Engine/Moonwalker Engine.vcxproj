@@ -22,6 +22,7 @@
     <ClInclude Include="Converter.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="File.h" />
+    <ClInclude Include="MemoryStuff.h" />
     <ClInclude Include="PacketQueue.h" />
     <ClInclude Include="SAMPFUNCS\game_api\game\C3DMarker.h" />
     <ClInclude Include="SAMPFUNCS\game_api\game\C3DMarkers.h" />
@@ -185,6 +186,7 @@
     <ClInclude Include="SAMPFUNCS\SFAPI\SFRender.h" />
     <ClInclude Include="SAMPFUNCS\SFAPI\SFSAMP.h" />
     <ClInclude Include="SAMPFUNCS\SFAPI\SF_Types.h" />
+    <ClInclude Include="SAMPSigcheck.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="walker.h" />
   </ItemGroup>
