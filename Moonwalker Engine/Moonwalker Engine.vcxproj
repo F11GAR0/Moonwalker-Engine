@@ -187,6 +187,7 @@
     <ClInclude Include="SAMPFUNCS\SFAPI\SFSAMP.h" />
     <ClInclude Include="SAMPFUNCS\SFAPI\SF_Types.h" />
     <ClInclude Include="SAMPSigcheck.h" />
+    <ClInclude Include="SAMPStructures.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="walker.h" />
   </ItemGroup>
