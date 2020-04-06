@@ -16,9 +16,7 @@ public:
 	}
 	void Delete(int index) {
 		if (index < 0 || index >= sequence_count) {
-			Exception *ex = new Exception("Sequence", (DWORD)this, "Delete", 2, "index out of range");
-			ex->Send();
-			delete ex;
+			throw std::exception("index out of range");
 		}
 		else {
 			int i = 0;
@@ -39,9 +37,7 @@ public:
 			return ret;
 		}
 		else {
-			Exception *ex = new Exception("Sequence", (DWORD)this, "PopFront", 1, "Trying to pop in empty sequence");
-			ex->Send();
-			delete ex;
+			throw std::exception("nothing to pop");
 			return NULL;
 		}
 	}
@@ -52,9 +48,7 @@ public:
 			return ret;
 		}
 		else {
-			Exception *ex = new Exception("Sequence", (DWORD)this, "PopBack", 1, "Trying to pop in empty sequence");
-			ex->Send();
-			delete ex;
+			throw std::exception("nothing to pop");
 			return NULL;
 		}
 	}

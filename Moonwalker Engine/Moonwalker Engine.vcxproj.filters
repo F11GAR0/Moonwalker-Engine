@@ -526,9 +526,6 @@
     <ClInclude Include="Sequence.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Exception.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="PacketQueue.h">
       <Filter>Engine</Filter>
     </ClInclude>
@@ -556,14 +553,21 @@
     <ClInclude Include="RakNetController.h">
       <Filter>Engine</Filter>
     </ClInclude>
+    <ClInclude Include="WalkerBase.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="walker.cpp" />
     <ClCompile Include="SAMPFUNCS\game_api\sdk\UTF8Detect.cpp">
       <Filter>SAMPFUNCS\game_api\sdk</Filter>
     </ClCompile>
-    <ClCompile Include="LiteRakNet\BitStream.cpp">
-      <Filter>LiteRakNet</Filter>
+    <ClCompile Include="WalkerBase.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="SAMPSigcheck.cpp" />
+    <ClCompile Include="RakNetController.cpp">
+      <Filter>Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

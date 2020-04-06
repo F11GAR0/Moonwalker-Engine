@@ -1,5 +1,5 @@
 #pragma once 
-#include "walker.h"
+#include "WalkerBase.h"
 
 //from s0beit
 class MemoryStuff {
@@ -93,7 +93,9 @@ public:
 			{
 				DWORD	dummy;
 				if (!VirtualProtect((void *)dest, this_len, prot_prev, &dummy))
-					NJIN->Log("__page_write() could not restore original permissions for ptr " + Convert::ToString(dest));
+				{
+					
+				}
 			}
 
 			dest += this_len;
@@ -139,8 +141,10 @@ public:
 			if (prot_changed)
 			{
 				DWORD	dummy;
-				if (!VirtualProtect((void *)src, this_len, prot_prev, &dummy))
-					NJIN->Log("__page_read() could not restore original permissions for ptr " + Convert::ToString(src));
+				if (!VirtualProtect((void *)src, this_len, prot_prev, &dummy)) {
+					//хуёво чё
+				}
+					//NJIN->Log("__page_read() could not restore original permissions for ptr " + Convert::ToString(src));
 			}
 
 			dest += this_len;

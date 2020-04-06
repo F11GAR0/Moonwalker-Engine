@@ -1,10 +1,15 @@
-#pragma once
+#ifndef WALKER_MAIN
+#define WALKER_MAIN
+
 #define WIN32_NO_STATUS
 #define WIN32_LEAN_AND_MEAN
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 
 #define NO_SAMPFUNCS
 #define LITE_RAKNET
+#define LOG_TIMESTAMP
+
+#define MOONWALKER_VERSION "1.0"
 
 #pragma message( "Compiling precompiled header.\n" )
 
@@ -37,7 +42,6 @@ typedef unsigned char byte;
 #include "LiteRakNet\BitStream.h"
 #include "LiteRakNet\RakClient.h"
 #include "RakNetController.h"
-
 #else
 #include <WinInet.h>
 #include <winsock2.h>
@@ -54,76 +58,18 @@ typedef unsigned char byte;
 #include "raknet\SAMP\samp_auth.h"
 #endif
 #endif
+#include "PacketQueue.h"
+#include "WalkerBase.h"
 
-
-#define LOG_TIMESTAMP
-
-class MOONWALKER {
-public:
-	MOONWALKER() {
-		_log.Delete(this->GetCurrentDllDirectory() + "\\WALKER\\walker.log");
-		//m_pRakNet = new RakNetController();
-		Log("Session started");
-	}
-	~MOONWALKER() {
-		Log("Session end with no errors.");
-	}
-	RakNetController *getRakNet() {
-		return m_pRakNet;
-	}
-	void Log(std::string message) {
-		SYSTEMTIME time;
-		GetLocalTime(&time);
-		_log.Open(this->GetCurrentDllDirectory() + "\\WALKER\\walker.log", Mode::M_OPEN_WRITE_APPEND);
-		_log.Write(
-#ifdef LOG_TIMESTAMP
-			"[" + Convert::ToString(time.wDay)
-			+ ":" + Convert::ToString(time.wMonth)
-			+ ":" + Convert::ToString(time.wYear)
-			+ " || " + Convert::ToString(time.wHour)
-			+ ":" + Convert::ToString(time.wMinute)
-			+ ":" + Convert::ToString(time.wSecond)
-			+ ":" + Convert::ToString(time.wMilliseconds)
-			+ "]: " +
-#endif
-			message + '\n');
-		_log.Close();
-	}
-private:
-	FileWriter _log;
-	RakNetController *m_pRakNet;
-	std::string GetCurrentDllDirectory()
-	{
-		char result[MAX_PATH];
-		std::string ret = std::string(result, GetModuleFileNameA(NULL, result, MAX_PATH));
-		bool stop = false;
-		while (!stop) {
-			if (ret[ret.size() - 1] != '\\')
-				ret.erase(ret.end() - 1);
-			else stop = true;
-		}
-		return ret;
-	}
-};
 
 #ifdef NO_SAMPFUNCS
-MOONWALKER *NJIN = new MOONWALKER();
+extern class MOONWALKER *NJIN;
 #else
-SAMPFUNCS *NJIN;
+extern class SAMPFUNCS *NJIN;
 #endif
-
-
-
-
-#include "SAMPStructures.h"
-
-#include "SAMPSigcheck.h"
-#include "PacketQueue.h"
-#include "Exception.h"
-
-
-
-
 
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved);
+#else
+
+#endif

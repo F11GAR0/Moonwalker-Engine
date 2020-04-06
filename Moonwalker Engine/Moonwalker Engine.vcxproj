@@ -20,7 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Converter.h" />
-    <ClInclude Include="Exception.h" />
     <ClInclude Include="File.h" />
     <ClInclude Include="LiteRakNet\BitStream.h" />
     <ClInclude Include="LiteRakNet\RakClient.h" />
@@ -193,11 +192,18 @@
     <ClInclude Include="SAMPStructures.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="walker.h" />
+    <ClInclude Include="WalkerBase.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LiteRakNet\BitStream.cpp" />
+    <ClCompile Include="RakNetController.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="SAMPFUNCS\game_api\sdk\UTF8Detect.cpp" />
-    <ClCompile Include="walker.cpp" />
+    <ClCompile Include="SAMPSigcheck.cpp" />
+    <ClCompile Include="walker.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WalkerBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="SAMPFUNCS\SFAPI\SAMPFUNCS.lib" />
@@ -276,7 +282,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>

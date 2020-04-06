@@ -1,8 +1,8 @@
 #include "walker.h"
 
+MOONWALKER *NJIN = new MOONWALKER();
 
 
-#define MOONWALKER_VERSION "1.0"
 
 Sequence<std::tuple<std::string, HMODULE>> *plugins = new Sequence<std::tuple<std::string, HMODULE>>();
 
@@ -20,10 +20,8 @@ void _stdcall LoadPlugin(std::string name) {
 		NJIN->Log("[MOONWALKER]: plugin \"" + name + "\" succesfuly loaded");
 	}
 	else {
-		Exception *ex = new Exception("LoadPlugin", 2, (std::string("Failed to load plugin from ") + path).c_str());
-		ex->Send();
+		NJIN->Log("Failed to load plugin from ");
 		free(path);
-		delete ex;
 	}
 }
 
@@ -71,7 +69,8 @@ void LoadPlugins() {
 
 void Entry(HMODULE hModule) {
 	NJIN->Log("[MOONWALKER]: Moonwalker loaded. Version: " + std::string(MOONWALKER_VERSION));
-	switch (SAMP::CheckVersion()) {
+	SAMPVER ver = NJIN->getSAMP()->CheckVersion();
+	switch (ver) {
 	case SAMPVER::UNKNOWN:
 		NJIN->Log("Unknown SAMP version!");
 		break;
@@ -82,6 +81,7 @@ void Entry(HMODULE hModule) {
 		NJIN->Log("Detected SAMP 0.3.7 R3 version!");
 		break;
 	}
+	NJIN->getSAMP()->LoadSAMPPoolSystem(ver);
 	LoadPlugins();
 }
 
