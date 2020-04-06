@@ -1,7 +1,12 @@
 #pragma once
 #define WIN32_NO_STATUS
+#define WIN32_LEAN_AND_MEAN
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 
 #define NO_SAMPFUNCS
+#define LITE_RAKNET
+
+#pragma message( "Compiling precompiled header.\n" )
 
 #include <Windows.h>
 #pragma warning (disable:4700)
@@ -25,6 +30,31 @@
 #include "File.h"
 #include "Converter.h"
 
+#ifdef NO_SAMPFUNCS
+#include "Sequence.h"
+#ifdef LITE_RAKNET
+typedef unsigned char byte;
+#include "LiteRakNet\BitStream.h"
+#include "LiteRakNet\RakClient.h"
+#include "RakNetController.h"
+
+#else
+#include <WinInet.h>
+#include <winsock2.h>
+#include <Ws2tcpip.h>
+#pragma comment(lib, "Ws2_32.lib")
+typedef unsigned char byte;
+#include "raknet\RakClient.h"
+#include "raknet\PacketEnumerations.h"
+#include "raknet\RakNetworkFactory.h"
+#include "raknet\RakClientInterface.h"
+#include "raknet\NetworkTypes.h"
+#include "raknet\BitStream.h"
+#include "raknet\StringCompressor.h"
+#include "raknet\SAMP\samp_auth.h"
+#endif
+#endif
+
 
 #define LOG_TIMESTAMP
 
@@ -32,10 +62,14 @@ class MOONWALKER {
 public:
 	MOONWALKER() {
 		_log.Delete(this->GetCurrentDllDirectory() + "\\WALKER\\walker.log");
+		//m_pRakNet = new RakNetController();
 		Log("Session started");
 	}
 	~MOONWALKER() {
 		Log("Session end with no errors.");
+	}
+	RakNetController *getRakNet() {
+		return m_pRakNet;
 	}
 	void Log(std::string message) {
 		SYSTEMTIME time;
@@ -57,6 +91,7 @@ public:
 	}
 private:
 	FileWriter _log;
+	RakNetController *m_pRakNet;
 	std::string GetCurrentDllDirectory()
 	{
 		char result[MAX_PATH];
@@ -77,10 +112,16 @@ MOONWALKER *NJIN = new MOONWALKER();
 SAMPFUNCS *NJIN;
 #endif
 
+
+
+
+#include "SAMPStructures.h"
+
 #include "SAMPSigcheck.h"
 #include "PacketQueue.h"
 #include "Exception.h"
-#include "Sequence.h"
+
+
 
 
 

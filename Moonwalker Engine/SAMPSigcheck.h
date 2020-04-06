@@ -1,4 +1,10 @@
 #pragma once
+/*
+TODO:
+- Setup SAMP Hooks (pools, raknet, etc)
+- Bound RakNetController callbacks and this shit
+*/
+
 #include "walker.h"
 #include "MemoryStuff.h"
 
@@ -7,11 +13,49 @@
 #define SAMP_R2SIGNATURE "F8036A004050518D4C24"
 #define SAMP_R3SIGNATURE "E86D9A0A0083C41C85C0"
 
+DWORD dwLastSAMPAddr;
+
 enum SAMPVER {
 	UNKNOWN = -13,
 	V037R2 = 1, 
 	V037R3
 };
+
+uint8_t _declspec (naked) hook_handle_rpc_packet(void)
+{
+	static LQ_RPCParameters *pRPCParams = nullptr;
+	static LQ_RPCNode *pRPCNode = nullptr;
+	static DWORD dwTmp = 0;
+
+	__asm pushad;
+	__asm mov pRPCParams, eax;
+	__asm mov pRPCNode, edi;
+
+
+	//HandleRPCPacketFunc(pRPCNode->uniqueIdentifier, pRPCParams, pRPCNode->staticFunctionPointer);
+	dwTmp = dwLastSAMPAddr + SAMP_HOOKEXIT_HANDLE_RPC;
+
+	__asm popad;
+	__asm add esp, 4 // overwritten code
+	__asm jmp dwTmp;
+}
+
+uint8_t _declspec (naked) hook_handle_rpc_packet2(void)
+{
+	static LQ_RPCParameters *pRPCParams = nullptr;
+	static LQ_RPCNode *pRPCNode = nullptr;
+	static DWORD dwTmp = 0;
+
+	__asm pushad;
+	__asm mov pRPCParams, ecx;
+	__asm mov pRPCNode, edi;
+
+	//HandleRPCPacketFunc(pRPCNode->uniqueIdentifier, pRPCParams, pRPCNode->staticFunctionPointer);
+	dwTmp = dwLastSAMPAddr + SAMP_HOOKEXIT_HANDLE_RPC2;
+
+	__asm popad;
+	__asm jmp dwTmp;
+}
 
 class SAMP {
 public:
@@ -23,6 +67,7 @@ public:
 		char add[256];
 		sprintf(add, "samp address getted: 0x%X", samp_dll);
 		NJIN->Log(add);
+		dwLastSAMPAddr = samp_dll;
 		return samp_dll;
 	}
 	static SAMPVER CheckVersion() {
@@ -84,5 +129,11 @@ public:
 				}
 			}
 		}
+		return SAMPVER::UNKNOWN;
 	}
+	static void InstallSampHooks() {
+
+	}
+private:
+	
 };

@@ -25,6 +25,15 @@
     <Filter Include="SAMPFUNCS\game_api\sdk\google\sparsehash">
       <UniqueIdentifier>{12849801-cbd5-4688-8495-b6990a79a8b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="raknet">
+      <UniqueIdentifier>{52e239a1-80a7-422b-bd02-f03518b6fd72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="raknet\SAMP">
+      <UniqueIdentifier>{378de055-7b7b-4884-a39f-983e1c9cbf03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LiteRakNet">
+      <UniqueIdentifier>{e4cd353f-0bbb-43c2-86d5-9ae3d960dbc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="walker.h" />
@@ -538,11 +547,23 @@
     <ClInclude Include="SAMPStructures.h">
       <Filter>Engine</Filter>
     </ClInclude>
+    <ClInclude Include="LiteRakNet\BitStream.h">
+      <Filter>LiteRakNet</Filter>
+    </ClInclude>
+    <ClInclude Include="LiteRakNet\RakClient.h">
+      <Filter>LiteRakNet</Filter>
+    </ClInclude>
+    <ClInclude Include="RakNetController.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="walker.cpp" />
     <ClCompile Include="SAMPFUNCS\game_api\sdk\UTF8Detect.cpp">
       <Filter>SAMPFUNCS\game_api\sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="LiteRakNet\BitStream.cpp">
+      <Filter>LiteRakNet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

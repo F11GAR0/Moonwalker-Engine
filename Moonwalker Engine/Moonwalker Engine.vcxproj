@@ -22,8 +22,11 @@
     <ClInclude Include="Converter.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="File.h" />
+    <ClInclude Include="LiteRakNet\BitStream.h" />
+    <ClInclude Include="LiteRakNet\RakClient.h" />
     <ClInclude Include="MemoryStuff.h" />
     <ClInclude Include="PacketQueue.h" />
+    <ClInclude Include="RakNetController.h" />
     <ClInclude Include="SAMPFUNCS\game_api\game\C3DMarker.h" />
     <ClInclude Include="SAMPFUNCS\game_api\game\C3DMarkers.h" />
     <ClInclude Include="SAMPFUNCS\game_api\game\CAERadioTrackManager.h" />
@@ -192,6 +195,7 @@
     <ClInclude Include="walker.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LiteRakNet\BitStream.cpp" />
     <ClCompile Include="SAMPFUNCS\game_api\sdk\UTF8Detect.cpp" />
     <ClCompile Include="walker.cpp" />
   </ItemGroup>
@@ -275,7 +279,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>SAMPFUNCS\SFAPI;SAMPFUNCS\game_api\sdk;</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -289,6 +293,8 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FloatingPointModel>Fast</FloatingPointModel>
       <CompileAs>CompileAsCpp</CompileAs>
+      <PrecompiledHeaderFile>walker.h</PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4995;4244;4996;4482;4409;4250;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
